@@ -7,17 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    TextView reg;
+public class register extends AppCompatActivity {
+    TextView log;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        reg = (TextView) findViewById(R.id.BuatAkunBaru);
-        reg.setOnContextClickListener(new View.OnContextClickListener() {
+        setContentView(R.layout.activity_register);
+        log = (TextView) findViewById(R.id.SudahAdaAkun);
+        log.setOnClickListener(new View.OnContextClickListener() {
             @Override
             public boolean onContextClick(View v) {
-                startActivity(new Intent(MainActivity.this,register.class));
+                startActivity(new Intent((MainActivity.this, register.class));
             }
         });
     }
